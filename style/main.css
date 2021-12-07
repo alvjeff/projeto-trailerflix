@@ -1,0 +1,118 @@
+
+:root{
+    /*utilizacao de variaveis em css*/
+    --vermelho: #E50914;
+    --preta: #141414;
+}
+
+*{
+    /*caracteristicas pre-definidas para todo o documento*/
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;       /*os elementos vao obrigatoriamente ter que caber dentro da caixa, nao farao ela expandir pra caber tudo dentro, mas serao expremidos.*/ 
+
+}
+
+/*Elementos base*/
+body{
+    background-color: var(--preta);
+    font-family: 'Times New Roman', Times, serif;
+    color: white;
+}
+
+header .container{    /*div do cabecalho que contem logo e menu*/
+    display: flex;    /*poe todos os elementos numa mesma linha*/
+    align-items: center;    /*alinhou os itens logo e h2 verticalmente*/
+    justify-content: space-between;     /*distribuiu os elementos deixando um espaco entre eles*/
+} 
+
+header .logo{     /*nome NETFLIX no canto superior esquerdo*/
+    color: var(--vermelho);
+    font-family: 'Arial Black';
+    font-size: 40px;
+    margin-left: 10px;
+}
+
+header nav a{     
+    text-decoration: none;
+    color: #AAA;
+    margin-right: 10px;
+}
+
+header nav a:hover{
+    color: #fff;
+}
+
+/*Filme principal*/
+
+/*parte4*/
+.filme-principal{
+    font-size: 16px;
+    background: linear-gradient(rgba(0,0,0,.50),rgba(0,0,0,.50)100%), url('/img/capa-house4.jpg');
+    
+    height: 400px;
+    background-size: cover ;
+    background-attachment: fixed;
+    
+    display: flex;     /*jogos os elementos todos em linha*/
+    flex-direction: column;
+    justify-content: center;     /*como esta em coluna, deixa os elementos no meio da coluna, se fosse em linha seria a mesma coisa, no meio da linha*/
+    align-items: flex-start;
+    
+}
+
+
+
+.filme-principal .container{
+    width: 60%;
+}
+
+.filme-principal .descricao{
+    margin-bottom: 40px;
+    margin-top: 10px;
+}
+
+.titulo{
+    margin-top: 15%;
+    font-size: 40px;
+    font-family: 'Trebuchet MS', Arial, sans-serif;
+}
+
+.botao{
+    background-color: rgba(0,0,0,.50);
+    border: none;
+    color: white;
+
+    padding: 15px 10px; /*15 é acima/abaico e 10 é esquerda/direita */
+    margin-right: 10px;
+    font-size: 12px;
+
+    cursor: pointer; /*altera o cursor quando passa o mouse sobre*/
+    transition: .5s ease all; /*efeito np botao, transmissao de uma animacao pra outra*/
+}
+
+.botao:hover{
+    background-color: white;
+    color: black;
+}
+
+.botao i{/**/
+    margin-right: 8px;
+}
+
+.container{
+    margin-left: 20px;
+}
+
+.box-filme{
+    height: 100%;
+    width: 100%;
+    display: block;
+    
+    /*eu que fiz*/
+    cursor: pointer;
+}
+
+.carrosel-filmes{
+    margin-top: 5px;
+}
